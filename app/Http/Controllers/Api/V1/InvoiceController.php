@@ -2,79 +2,137 @@
 
 namespace App\Http\Controllers\Api\v1;
 
+use Exception;
 use App\Models\Invoice;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Services\V1\InvoicesQuery;
-use App\Http\Requests\StoreInvoiceRequest;
-use App\Http\Requests\UpdateInvoiceRequest;
-use App\Http\Resources\V1\InvoicesResource;
+use App\Http\Requests\Api\EditInvoiceRequest;
 use App\Http\Resources\V1\InvoicesCollection;
+use App\Http\Requests\Api\CreateInvoiceRequest;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class InvoiceController extends Controller
 {
+     
     /**
-     * Display a listing of the resource.
+     * Summary of index
+     * @param \Illuminate\Http\Request $request
+     * @return InvoicesCollection
      */
     public function index(Request $request)
     {
         $filter = new InvoicesQuery();
-        $queryItems = $filter->transform($request);
+        $queryItems = $filter->filterRequest($request);
 
         if(count($queryItems) == 0){
-            return new InvoicesCollection(Invoice::paginate()); 
+            return new InvoicesCollection(Invoice::paginate(400)); 
         }
 
-        $invoices = Invoice::where($queryItems)->paginate(); 
-        return new InvoicesCollection($invoices->appends($request->query()));
-    
+        return new InvoicesCollection(Invoice::where($queryItems)->paginate(400)->appends($request->query()));
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Summary of create
+     * @param \App\Http\Requests\Api\CreateInvoiceRequest $request
+     * @return mixed|\Illuminate\Http\JsonResponse
      */
-    public function create()
+    public function create(CreateInvoiceRequest $request)
     {
+        try {
+
+            $invoice = new Invoice();
+
+            $invoice->amount = $request->amount;
+            $invoice->customer_id = $request->customer_id;
+            $invoice->user_id = Auth::user()->id;
+            $invoice->status = $request->status;
+            $invoice->billed_date = $request->billed_date;
+            $invoice->paided_date = $request->paided_date;
+            $invoice->save();
+
+            return response()->json([
+                'status_code' => 200,
+                'success' => 'true',
+                'status_message' => 'invoice add with success',
+                'data' => $invoice
+            ]);
+
+        }catch(Exception $error){
+          return response()->json($error);
+       }
+    }
+
+    /**
+     * Summary of show
+     * @param \App\Models\Invoice $invoice
+     * @return Invoice
+     */
+    public function show(Invoice $invoice)
+    {
+        return $invoice;
+        //return new InvoicesResource($invoice);
+    }
+
+    /**
+     * Summary of update
+     * @param \App\Http\Requests\Api\EditInvoiceRequest $request
+     * @param \App\Models\Invoice $invoice
+     * @return mixed|\Illuminate\Http\JsonResponse
+     */
+    public function update(EditInvoiceRequest $request, Invoice $invoice)
+    {
+        $find = Invoice::find($invoice);
+
+        $find->amount = $request->amount;
+        $find->customer_id = $request->customer_id;
+        $find->status = $request->status;
+        $find->billed_date = $request->billed_date;
+        $find->paided_date = $request->paided_date;
+        $find->save();
+
+        return response()->json([
+            'status_code' => 200,
+            'success' => 'true',
+            'status_message' => 'invoice update with success',
+            'data' => $invoice
+        ]);
         
     }
 
     /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreInvoiceRequest $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Invoice $invoice)
-    {
-        return new InvoicesResource($invoice);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Invoice $invoice)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateInvoiceRequest $request, Invoice $invoice)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
+     * Summary of destroy
+     * @param \App\Models\Invoice $invoice
+     * @return mixed|\Illuminate\Http\JsonResponse
      */
     public function destroy(Invoice $invoice)
     {
-        //
+        try{
+                $invoice->delete();
+                
+                return response()->json([
+                'status_code' => 200,
+                'success' => 'true',
+                'status_message' => 'invoice delete with success',
+                'deleted_data' => $invoice
+                ]);
+
+            
+        }catch(ModelNotFoundException $error){
+            return response()->json([
+                'status_code' => 404,
+                'status_message' => 'Invoice not found',
+                'error' => $error->getMessage()
+
+            ]);
+        }catch(Exception $error){
+            return response()->json([
+                'status_code' => 500,
+                'status_message' => 'An error occurred while deleting the customer',
+                'error' => $error->getMessage(),
+                'trace' => $error->getTrace()
+            ]);
+        }
     }
 }

@@ -6,7 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Exceptions\HttpResponseException;
 
-class StoreCustomersRequest extends FormRequest
+class CreateCustomerRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,12 +26,18 @@ class StoreCustomersRequest extends FormRequest
         return [
             'name' => ['required','string'],
             'type' => ['required','string'],
-            'address' => ['required','string', 'unique.customers'],
+            'address' => ['required','string'],
             'city' => ['required','string'],
             'postal_code' => ['required','string']
         ];
     }
 
+    /**
+     * Summary of failedForValidation
+     * @param \Illuminate\Contracts\Validation\Validator $validator
+     * @throws \Illuminate\Http\Exceptions\HttpResponseException
+     * @return never
+     */
     public function failedForValidation(Validator $validator)
     {
         throw new HttpResponseException(response()->json([
@@ -42,6 +48,10 @@ class StoreCustomersRequest extends FormRequest
         ]));
     }
 
+    /**
+     * Summary of messageRequiredErros
+     * @return string[]
+     */
     public function messageRequiredErros()
     {
         return [
@@ -53,17 +63,21 @@ class StoreCustomersRequest extends FormRequest
         ];
     }
 
+    /**
+     * Summary of messageStringErrors
+     * @return string[]
+     */
     public function messageStringErrors()
     {
         return [
             'name.string' => 'name must be a string',
             'type.string' => 'type must be a string',
             'address.string' => 'address must be a string',
-            'address.unique.customers' => 'address already exist',
             'city.string' => 'city must be a string',
             'postal_code.string' => 'postal code must be a string',
         ];
-    }
+    } 
+
 }
 
 

@@ -9,11 +9,11 @@ class InvoicesQuery extends BaseQueryFilter
 {
 
   protected $safeParams = [
-      'customerId' => ['eq', 'gt', 'lt'],
-      'amount' => ['eq', 'gt', 'lt', 'gte', 'lte'],
-      'status' => ['ne', 'eq'],
-      'billedDate' => ['eq', 'gt', 'lt'],
-      'paidDate' => ['eq', 'gt', 'lt']
+      'customerId' => ['equal', 'greater_than', 'less_than'],
+      'amount' => ['equal', 'greater_than', 'less_than', 'greater_than', 'less_than'],
+      'status' => ['not_equal', 'equal'],
+      'billedDate' => ['equal', 'greater_than', 'less_than'],
+      'paidDate' => ['equal', 'greater_than', 'less_than']
   ];
 
   protected $columnMap = [
@@ -23,12 +23,12 @@ class InvoicesQuery extends BaseQueryFilter
   ];
 
   protected $operatorMap = [
-    'eq' => '=',
-    'gt' => '>',
-    'lt' => '<',
-    'gte' => '>=',
-    'lte' => '<=',
-    'ne' => '!='
+    'equal' => '=',
+    'greater' => '>',
+    'less_than' => '<',
+    'greater_than_equal' => '>=',
+    'less_than_equal' => '<=',
+    'not_equal' => '!='
   ];
 }
 

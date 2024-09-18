@@ -4,15 +4,15 @@ namespace App\Http\Services\V1;
 
 use App\Http\Services\BaseQueryFilter;
 
-class customerQuery extends BaseQueryFilter
+class CustomerQuery extends BaseQueryFilter
 {
   protected $safeParams = [
-      'id' => ['eq', 'gt', 'lt', 'gte', 'lte'],
-      'name' => ['eq'],
-      'type' => ['eq'],
-      'address' => ['eq', 'lt'],
+      'id' => ['equal', 'greater_than', 'less_than', 'greater_than_equal', 'less_than_equal'],
+      'name' => ['equal'],
+      'type' => ['equal'],
+      'address' => ['equal', 'less_than_equal'],
       'city' => ['eq'],
-      'postalCode' => ['eq', 'gt', 'lt']
+      'postalCode' => ['equal', 'greater_than', 'less_than']
     ];
 
     protected $columnMap = [
@@ -20,12 +20,12 @@ class customerQuery extends BaseQueryFilter
     ];
 
     protected $operatorMap = [
-      'eq' => '=',
-      'gt' => '>',
-      'lt' => '<',
-      'gte' => '>=',
-      'lte' => '<=',
-      'ne' => '!='
+      'equal' => '=',
+      'greater_than' => '>',
+      'less_than' => '<',
+      'greater_than_equal' => '>=',
+      'less_than_equal' => '<=',
+      'not_equal' => '!='
     ];
 }
 

@@ -10,7 +10,12 @@ abstract class BaseQueryFilter {
   protected $operatorMap = [];
   protected $columnMap = [];
 
-  public function transform (Request $request) {
+  /**
+   * Summary of filterRequest
+   * @param \Illuminate\Http\Request $request
+   * @return array<mixed|string>[]
+   */
+  public function filterRequest(Request $request) {
 
     $finalQuery = [];
 
