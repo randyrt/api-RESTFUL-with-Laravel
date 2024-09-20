@@ -32,5 +32,3 @@ class InvoicesQuery extends BaseQueryFilter
   ];
 }
 
-
-
