@@ -12,6 +12,11 @@ use App\Http\Requests\Api\UserRegisterRequest;
 
 class UserController extends Controller
 {
+    /**
+     * Summary of register
+     * @param \App\Http\Requests\Api\UserRegisterRequest $request
+     * @return mixed|\Illuminate\Http\JsonResponse
+     */
     public function register(UserRegisterRequest $request){
 
        try {
@@ -34,6 +39,11 @@ class UserController extends Controller
        }
     }
 
+    /**
+     * Summary of login
+     * @param \App\Http\Requests\Api\LoginUserRequest $request
+     * @return mixed|\Illuminate\Http\JsonResponse
+     */
     public function login(LoginUserRequest $request)
     {
         if(Auth::attempt($request->only(['email', 'password']))){
@@ -43,7 +53,7 @@ class UserController extends Controller
              return response()->json([
                 'status_code' => '200',
                 'success' => true,
-                'status_message' => 'user connected !',
+                'status_message' => 'Operation completed successfully !',
                 'token' => $token
             ]);
 
@@ -55,4 +65,5 @@ class UserController extends Controller
             ]);
         }
     }
+
 }

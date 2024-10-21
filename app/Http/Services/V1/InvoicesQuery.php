@@ -24,7 +24,7 @@ class InvoicesQuery extends BaseQueryFilter
 
   protected $operatorMap = [
     'equal' => '=',
-    'greater' => '>',
+    'greater_than' => '>',
     'less_than' => '<',
     'greater_than_equal' => '>=',
     'less_than_equal' => '<=',
