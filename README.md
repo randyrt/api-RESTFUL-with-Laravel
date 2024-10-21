@@ -91,7 +91,7 @@ Pourquoi ?
 2. **Choisissez la méthode HTTP** : POST.
 3. **Entrez l'URL de l'API pour la connexion**.  ```bash http://localhost:8000/api/login  ```
 
-Body : 
+###### Body :
    ```json
     {
         "email": "Votre email",
