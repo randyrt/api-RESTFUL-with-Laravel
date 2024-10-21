@@ -87,8 +87,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
    cd nom-du-projet
 
 3.  **Installer les dépendances** :
- > Après avoir cloné le projet, vous devez installer les dépendances via Composer :
-  '''bash
+ - Après avoir cloné le projet, vous devez installer les dépendances via Composer :
+  ```bash
   composer install
 
 4. **Configurer l'environnement** :
