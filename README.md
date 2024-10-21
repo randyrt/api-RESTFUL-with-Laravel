@@ -120,7 +120,7 @@ cp .env.example .env
 php artisan key:generate
 ```
 
-### 6. Demarrer le serveur 
+### 6. Démarrer le serveur local
 ```bash
 php artisan key:generate
 ```
