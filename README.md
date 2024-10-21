@@ -123,7 +123,7 @@ Voici un exemple de ce à quoi pourrait ressembler cela :
 En tête dans la section Authorization:
 - Type : Bearer Token
 - Token : "(Votre token)"
-Body : 
+###### Body : 
  ```json
     {
         "email": "Votre email",
