@@ -92,15 +92,15 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ### 1. Cloner le projet depuis GitHub
 
 Pour cloner le projet, exécutez la commande suivante :
-```bash```
+```bash
 git clone https://github.com/ton-username/nom-du-projet.git
-
+```
 
 ### 2. Naviguer dans le répertoire du projet
 Ensuite, accédez au répertoire cloné avec la commande suivante :
-```bash```
+```bash
 composer install
-
+```
 
 
   
