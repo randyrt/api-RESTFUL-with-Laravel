@@ -69,5 +69,29 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 # API Documentation
 
+# Installation et utilisation locale de l'API
 
+### Prérequis
+- PHP >= 8.x
+- Composer
+- MySQL (ou une autre base de données compatible)
+- Git
+
+1. **Cloner le projet depuis GitHub** :
+   - Utilisez la commande suivante dans votre terminal :
+   ```bash
+   git clone https://github.com/randyrt/api-RESTFUL-with-Laravel.git
+   
+2. **Naviguer dans le répertoire du projet** :
+   '''bash
+   cd nom-du-projet
+
+3.  **Installer les dépendances** :
+ > Après avoir cloné le projet, vous devez installer les dépendances via Composer :
+  '''bash
+  composer install
+
+4. **Configurer l'environnement** :
+
+  
 
