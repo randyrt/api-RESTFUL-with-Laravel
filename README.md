@@ -196,15 +196,30 @@ Body :
 
 ### Réponse de la requête avec le Bearer Token
 Si tout se passe bien, après avoir envoyé votre requête avec le Bearer Token, vous recevrez une réponse au format JSON contenant les informations de l'utilisateur connecté. Voici un exemple de ce à quoi pourrait ressembler la réponse :
+```json
+{
+    "status_code": 200,
+    "status-message: "operation completed successfully",
+    "success": true,
+    "token": "{votre_token}"
+}
+```
 
+### Étape 4 : Vérifier que vous êtes réellement connecté : 
+
+1. **Créez une nouvelle requête** dans Postman ou Insomnia.
+2. **Méthode HTTP** : GET
+3. **Entrez l'URL de l'API : ```bash http://localhost:8000/api/protected ```
+Si tout se passe bien, Voici un exemple de ce à quoi pourrait ressembler la réponse :
 ```json
 {
     "status_code": 200,
     "success": true,
+    "status-message: "you're connected",
     "user": {
-        "id": 1,
-        "name": "VotreNom",
-        "email": "votre.email@example.com"
-    }
+       "id": "Votre id",
+      "name": "Votre nom",
+      "email": "Votre email"
+   }
 }
 ```
