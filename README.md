@@ -77,21 +77,19 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - MySQL (ou une autre base de données compatible)
 - Git
 
-1. **Cloner le projet depuis GitHub** :
-   - Utilisez la commande suivante dans votre terminal :
-   ```bash
-   git clone https://github.com/randyrt/api-RESTFUL-with-Laravel.git
-   
-2. **Naviguer dans le répertoire du projet** :
-   '''bash
-   cd nom-du-projet
+### Étapes pour cloner et tester l'API
 
-3.  **Installer les dépendances** :
- - Après avoir cloné le projet, vous devez installer les dépendances via Composer :
-  ```bash
-  composer install
+1. **[Cloner le projet depuis GitHub](#1-cloner-le-projet-depuis-github)**
+2. **[Naviguer dans le répertoire du projet](#2-naviguer-dans-le-répertoire-du-projet)**
+3. **[Installer les dépendances](#3-installer-les-dépendances)**
+4. **[Configurer l'environnement](#4-configurer-lenvironnement)**
+5. **[Générer une clé d'application](#5-générer-une-clé-dapplication)**
+6. **[Exécuter les migrations de base de données](#6-exécuter-les-migrations-de-base-de-données)**
+7. **[Démarrer le serveur local](#7-démarrer-le-serveur-local)**   
 
-4. **Configurer l'environnement** :
+
+
+
 
   
 
