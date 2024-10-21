@@ -69,7 +69,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 # API Documentation
 
-# Installation et utilisation locale de l'API
+## Installation et utilisation locale de l'API
 
 ### Prérequis
 - PHP >= 8.x
