@@ -307,5 +307,5 @@ Ce projet est sous licence [MIT](LICENSE). Vous êtes libre de l'utiliser, le mo
 
 ## Contact
 
-Pour toute question ou suggestion, vous pouvez nous contacter à [email@exemple.com](mailto:email@exemple.com).
+Pour toute question ou suggestion, vous pouvez nous contacter à [à mon adresse email professionnel](mailto:randytsiory@gmail.com).
 
