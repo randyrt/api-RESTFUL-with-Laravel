@@ -259,11 +259,11 @@ Chaque endpoint offre des opérations spécifiques, et vous pouvez interagir ave
 
 L'API prend également en charge des requêtes avancées pour filtrer les données. Vous pouvez utiliser des opérateurs pour affiner les résultats selon vos besoins, tels que :
 
-> `equal` : pour rechercher des valeurs égales à une certaine donnée.
-> `greater_than` : pour rechercher des valeurs supérieures à un seuil donné.
-> `less_than` : pour rechercher des valeurs inférieures à un seuil donné.
-> `greater_than_equal` : rechercher des valeurs supérieures et égales à un seuil donné.
-> `less_than_equal` : rechercher des valeurs inférieures et égales à un seuil donné.
+- `equal` : pour rechercher des valeurs égales à une certaine donnée.
+- `greater_than` : pour rechercher des valeurs supérieures à un seuil donné.
+- `less_than` : pour rechercher des valeurs inférieures à un seuil donné.
+- `greater_than_equal` : rechercher des valeurs supérieures et égales à un seuil donné.
+- `less_than_equal` : rechercher des valeurs inférieures et égales à un seuil donné.
 
 #### Exemple d'utilisation 1 : 
 - `api/v1/customers?type[equal]=company`
