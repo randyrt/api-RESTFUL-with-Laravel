@@ -102,24 +102,24 @@ Ensuite, accédez au répertoire cloné avec la commande suivante :
 cd nom-du-projet
 ```
 
-###3. Installer les dépendances
+### 3. Installer les dépendances
  Pour installer les dépendances, Vuillez tapez la commande suivante : 
  ```bash
 composer install
 ```
 
-4. Configurer l'environnement
+### 4. Configurer l'environnement
 Renommez le fichier .env.example en .env :
  ```bash
 cp .env.example .env
 ```
 
-5. Générer une clé d'application
+### 5. Générer une clé d'application
 ```bash
 php artisan key:generate
 ```
 
-6. Exécuter les migrations de base de données
+### 6. Exécuter les migrations de base de données
 ```bash
 php artisan migrate 
 php artisan db:seed 
