@@ -84,8 +84,9 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 3. **[Installer les dépendances](#3-installer-les-dépendances)**
 4. **[Configurer l'environnement](#4-configurer-lenvironnement)**
 5. **[Générer une clé d'application](#5-générer-une-clé-dapplication)**
-6. **[Exécuter les migrations de base de données](#6-exécuter-les-migrations-de-base-de-données)**
-7. **[Démarrer le serveur local](#7-démarrer-le-serveur-local)**   
+6. **[Démarrer le serveur local](#7-démarrer-le-serveur-local)**   
+7. **[Exécuter les migrations de base de données](#6-exécuter-les-migrations-de-base-de-données)**
+
 
 ## Étapes pour l'installation de l'API			
 
@@ -119,7 +120,12 @@ cp .env.example .env
 php artisan key:generate
 ```
 
-### 6. Exécuter les migrations de base de données
+### 6. Demarrer le serveur 
+```bash
+php artisan key:generate
+```
+
+### 7. Exécuter les migrations de base de données
 ```bash
 php artisan migrate 
 php artisan db:seed
