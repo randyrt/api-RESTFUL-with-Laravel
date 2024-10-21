@@ -122,5 +122,22 @@ php artisan key:generate
 ### 6. Exécuter les migrations de base de données
 ```bash
 php artisan migrate 
-php artisan db:seed 
+php artisan db:seed
+```
+
+## Tester l'API
+
+Pour tester cette API, vous pouvez utiliser des outils comme [Postman](https://www.postman.com/) ou [Insomnia](https://insomnia.rest/). Ces outils vous permettent d'envoyer des requêtes HTTP, de visualiser les réponses, et de gérer facilement les en-têtes et les paramètres d'authentification.
+
+### Utilisation avec Postman ou Insomnia
+ 
+### Étape 1 : Effectuer une requête GET
+
+1. **Créez une nouvelle requête** dans Postman ou Insomnia.
+2. **Méthode HTTP** : GET
+   **ENDPONT : ```bash  http://localhost:8000/api/register ```
+
+
+
+  
 
