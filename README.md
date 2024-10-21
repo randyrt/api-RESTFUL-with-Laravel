@@ -237,3 +237,37 @@ Si tout se passe bien, Voici un exemple de ce à quoi pourrait ressembler la ré
 
 
 ## Test du Premier Endpoint
+### Vue d'ensemble de l'API
+
+Cette API comporte deux endpoints majeurs pour la gestion de vos données :
+
+1. **Endpoint Clients**
+   - Utilisé pour gérer les données liées aux clients, comme la création, la mise à jour et la récupération d'informations sur les clients.
+   - URL de base : `api/v1/api/customers`
+
+2. **Endpoint Factures**
+   - Utilisé pour gérer les factures, y compris la génération, la mise à jour et la récupération des enregistrements de factures.
+   - URL de base : `api/v1/api/invoices`
+
+Chaque endpoint offre des opérations spécifiques, et vous pouvez interagir avec eux en utilisant des méthodes HTTP telles que `GET`, `POST`, `PUT` et `DELETE`. Des instructions détaillées pour chaque endpoint sont fournies ci-dessous.
+
+### Filtrer les rêquetes GET par ID : 
+- `api/v1/api/customers/id`
+- `api/v1/api/invoices/id`
+
+### Requêtes Avancées :
+
+L'API prend également en charge des requêtes avancées pour filtrer les données. Vous pouvez utiliser des opérateurs pour affiner les résultats selon vos besoins, tels que :
+
+- `equal` : pour rechercher des valeurs égales à une certaine donnée.
+- `greater_than` : pour rechercher des valeurs supérieures à un seuil donné.
+- `less_than` : pour rechercher des valeurs inférieures à un seuil donné.
+- `greater_than_equal` : rechercher des valeurs supérieures et égales à un seuil donné.
+- `less_than_equal` : rechercher des valeurs inférieures et égales à un seuil donné.
+
+#### Exemple d'utilisation 1 : 
+- `api/v1/customers/?type[equal]=company`
+- `api/v1/invoices/?status[equal]=Billed`
+
+ 
+ 
