@@ -299,7 +299,7 @@ Les contributions sont les bienvenues ! Si vous souhaitez contribuer à ce proje
 
 ## Support
 
-Si vous avez besoin d'aide, ou si vous rencontrez des bugs, veuillez consulter la section [Issues](https://github.com/nom-de-repo/issues) du projet pour signaler un problème ou poser une question.
+Si vous avez besoin d'aide, ou si vous rencontrez des bugs, veuillez consulter la section [Issues](https://github.com/randyrt/api-RESTFUL-with-Laravel/issues) du projet pour signaler un problème ou poser une question.
 
 ## Licence
 
