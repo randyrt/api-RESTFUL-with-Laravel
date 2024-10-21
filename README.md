@@ -87,7 +87,19 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 6. **[Exécuter les migrations de base de données](#6-exécuter-les-migrations-de-base-de-données)**
 7. **[Démarrer le serveur local](#7-démarrer-le-serveur-local)**   
 
+## Étapes pour l'installation de l'API			
 
+### 1. Cloner le projet depuis GitHub
+
+Pour cloner le projet, exécutez la commande suivante :
+```bash```
+git clone https://github.com/ton-username/nom-du-projet.git
+
+
+### 2. Naviguer dans le répertoire du projet
+Ensuite, accédez au répertoire cloné avec la commande suivante :
+```bash```
+composer install
 
 
 
