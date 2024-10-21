@@ -131,13 +131,80 @@ Pour tester cette API, vous pouvez utiliser des outils comme [Postman](https://w
 
 ### Utilisation avec Postman ou Insomnia
  
-### Étape 1 : Effectuer une requête GET
+### Étape 1 : Effectuer une requête GET pour l'inscription
 
 1. **Créez une nouvelle requête** dans Postman ou Insomnia.
-2. **Méthode HTTP** : GET
-   **ENDPONT : ```bash  http://localhost:8000/api/register ```
+2. **Méthode HTTP** : POST
+3. **Entrez l'URL de l'API pour la connexion**.  ```bash http://localhost:8000/api/register  ```
+4. **Ajoutez les en-têtes nécessaires** pour l'authentification et les informations utilisateur. Dans l'en-tête, vous pouvez inclure les informations suivantes en format JSON :
+```json
 
+{
+    "name": "VotreNom",
+    "email": "votre.email@example.com",
+    "password": "VotreMotDePasse"
+}
+```
 
+### Étape 2 : Obtention du Token : 
+Pourquoi ? 
+> Pour accéder aux endpoints protégés de l'API, vous devez d'abord faire une rêquette POST pour pouvoir obtenir un **Bearer Token** :
 
-  
+1. **Créez une nouvelle requête** dans Postman ou Insomnia.
+2. **Choisissez la méthode HTTP** : POST.
+3. **Entrez l'URL de l'API pour la connexion**.  ```bash http://localhost:8000/api/login  ```
 
+Body : 
+   ```json
+    {
+        "email": "Votre email",
+        "password": "Votre mot de passe"
+    }
+   ```
+
+### Réponse de la requête de connexion
+Après avoir envoyé la requête POST pour l'obtention de "Token", vous recevrez une réponse au format JSON. Voici un exemple de ce à quoi pourrait ressembler la réponse :
+
+```json
+{
+    "status_code": 200,
+    "status-message: "operation completed successfully",
+    "success": true,
+    "token": "{votre_token}"
+}
+```
+
+### Étape 3 : Faire une autre requête avec le Bearer Token
+Une fois que vous avez obtenu votre Bearer Token, vous devez effectuer une autre requête sur le même endpoint pour accéder aux ressources protégées. Voici comment procéder :
+
+1. **Créez une nouvelle requête** dans Postman ou Insomnia.
+2. **Choisissez la méthode HTTP** : POST 
+3. **Entrez l'URL de l'API pour le même endpoint** que précédemment : ```bash http://localhost:8000/api/login  ```
+
+Remarque importante : L'opération est la même, mais cette fois-ci, vous devez inclure dans l'en tête du rêquete POST le Token d'autorisation. 
+Voici un exemple de ce à quoi pourrait ressembler cela : 
+En tête dans la section Authorization:
+- Type : Bearer Token
+- Token : "(Votre token)"
+Body : 
+ ```json
+    {
+        "email": "Votre email",
+        "password": "Votre mot de passe"
+    }
+ ```
+
+### Réponse de la requête avec le Bearer Token
+Si tout se passe bien, après avoir envoyé votre requête avec le Bearer Token, vous recevrez une réponse au format JSON contenant les informations de l'utilisateur connecté. Voici un exemple de ce à quoi pourrait ressembler la réponse :
+
+```json
+{
+    "status_code": 200,
+    "success": true,
+    "user": {
+        "id": 1,
+        "name": "VotreNom",
+        "email": "votre.email@example.com"
+    }
+}
+```
