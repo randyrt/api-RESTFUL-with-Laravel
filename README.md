@@ -105,7 +105,7 @@ Après avoir envoyé la requête POST pour l'obtention de "Token", vous recevrez
 ```json
 {
     "status_code": 200,
-    "status-message: "operation completed successfully",
+    "status-message: "Operation completed successfully",
     "success": true,
     "token": "{votre_token}"
 }
@@ -136,7 +136,7 @@ Si tout se passe bien, après avoir envoyé votre requête avec le Bearer Token,
 ```json
 {
     "status_code": 200,
-    "status-message: "operation completed successfully",
+    "status-message: "Operation completed successfully",
     "success": true,
     "token": "{votre_token}"
 }
@@ -152,7 +152,7 @@ Si tout se passe bien, Voici un exemple de ce à quoi pourrait ressembler la ré
 {
     "status_code": 200,
     "success": true,
-    "status-message: "you're connected",
+    "status-message: "You're connected",
     "user": {
        "id": "Votre id",
       "name": "Votre nom",
