@@ -99,7 +99,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 Pour cloner le projet, exécutez la commande suivante :
 ```bash
-git clone https://github.com/ton-username/nom-du-projet.git
+git clone https://github.com/randyrt/api-RESTFUL-with-Laravel.git
 ```
 
 ### 2. Naviguer dans le répertoire du projet
