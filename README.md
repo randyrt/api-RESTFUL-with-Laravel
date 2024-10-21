@@ -233,5 +233,5 @@ Ce projet est sous licence [MIT](LICENSE). Vous êtes libre de l'utiliser, le mo
 
 ## Contact
 
-Pour toute question ou suggestion, vous pouvez me contacter à [à mon adresse email professionnel](mailto:randytsiory@gmail.com).
+Pour toute question ou suggestion, vous pouvez me contacter à [mon adresse email professionnel](mailto:randytsiory@gmail.com).
 
