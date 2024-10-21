@@ -270,5 +270,42 @@ L'API prend également en charge des requêtes avancées pour filtrer les donné
 - `api/v1/invoices?status[equal]=Billed`
 
 #### Exemple d'utilisation 2 : 
-- `api/v1/customers?type[equal]=company`
+- `api/v1/customers?type[equal]=company&postal_code[less_than]=30000`
 - `api/v1/invoices?status[equal]=Billed&amount[greater_than]=350`
+
+### Editer un "customer" ou un "invoice" :
+Méhode HTTP : PUT 
+- `api/v1/customers/edit/id`
+- `api/v1/invoices/edit/id`
+
+### Supprimer un "customer" ou un "invoice":
+Méhode HTTP : DELETE
+- `api/v1/customers/delete/id`
+- `api/v1/invoices/delete/id`
+
+
+## Remerciements
+
+Merci d'avoir testé mon API ! Si vous rencontrez des problèmes ou si vous avez des suggestions pour améliorer ce projet, n'hésitez pas à ouvrir une issue ou à proposer une pull request.
+
+## Contribuer
+
+Les contributions sont les bienvenues ! Si vous souhaitez contribuer à ce projet, veuillez suivre ces étapes :
+1. Fork le projet.
+2. Créez une branche pour votre fonctionnalité (`git checkout -b nouvelle-fonctionnalité`).
+3. Commitez vos modifications (`git commit -m 'Ajout de nouvelle fonctionnalité'`).
+4. Poussez votre branche (`git push origin nouvelle-fonctionnalité`).
+5. Ouvrez une pull request.
+
+## Support
+
+Si vous avez besoin d'aide, ou si vous rencontrez des bugs, veuillez consulter la section [Issues](https://github.com/nom-de-repo/issues) du projet pour signaler un problème ou poser une question.
+
+## Licence
+
+Ce projet est sous licence [MIT](LICENSE). Vous êtes libre de l'utiliser, le modifier et le distribuer tant que vous respectez les termes de la licence.
+
+## Contact
+
+Pour toute question ou suggestion, vous pouvez nous contacter à [email@exemple.com](mailto:email@exemple.com).
+
