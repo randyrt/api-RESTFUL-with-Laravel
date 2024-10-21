@@ -127,7 +127,7 @@ php artisan key:generate
 
 ### 6. Démarrer le serveur local
 ```bash
-php artisan key:generate
+php artisan serve
 ```
 
 ### 7. Exécuter les migrations de base de données
