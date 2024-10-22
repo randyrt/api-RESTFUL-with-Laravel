@@ -288,7 +288,7 @@ Si tout se passe bien, voici un exemple de ce qui pourrait à quoi ressembler la
     "status_message": "invoice add with success",
     "data": {
         "amount": 500,
-        "customer_id": 139,
+        "customer_id": "clé étrangère qui se référe à un customer",
         "user_id": "Générer automatiquement par le système, sert à idéntifer votre post"
         "status": "Cancel",
         "billed_date": "2023-05-26 03:10:13",
