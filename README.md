@@ -232,7 +232,7 @@ Methode HTTP : POST
 ### Création d'un nouveau post
 Il est important de ne pas inclure les champs id, created_at et updated_at, car ils seront gérés automatiquement par le système.
 
-#### body pour "un customer" :
+###### body pour "un customer" :
  ```json
  {
     "name": "Nouveau nom",
@@ -270,7 +270,8 @@ Table Customers : Contient les informations des clients, identifiés par un ID u
 Table Invoices : Contient les informations des factures, chaque facture ayant un champ customerID correspond à l'ID d'un client.
 Cette relation permet d'assurer l'intégrité des données et de relier facilement les factures à leurs clients respectifs.
 Donc logiquement, le "customerId" dans un "invoice" sera toujours l'id de votre nouveau "customer". Ce qui fait qu'il est récommendé de créer un nouveu "customer" avant de créer un nouveau "invoice".
-####body pour "un invoice" :
+
+###### body pour "un invoice" :
 ```json
  {
     "amount" : "Nouveu montant",
