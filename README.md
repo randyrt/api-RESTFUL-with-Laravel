@@ -230,7 +230,7 @@ Methode HTTP : POST
 - `api/v1/invoices/create`
 
 ### Création d'un nouveau post
-Il est important de ne pas inclure les champs id, created_at et updated_at, car ils seront gérés automatiquement par le système.
+Il est important de ne pas inclure les champs id, created_at et updated_at et userId, car ils seront gérés automatiquement par le système.
 
 ###### body pour "un customer" :
  ```json
@@ -240,7 +240,6 @@ Il est important de ne pas inclure les champs id, created_at et updated_at, car 
     "address": "Nouvel addresse",
     "city": "Ville",
     "postal_code": "Nouvel code postal",
-    "user_id": "Votre id en tant qu'user, pourqu'on puisse identifier votre post"
 }    
 ```
 Si tout se passe bien, voici un exemple de ce qui pourrait à quoi ressembler la réponse : 
@@ -254,11 +253,11 @@ Si tout se passe bien, voici un exemple de ce qui pourrait à quoi ressembler la
         "type": "company ou individual",
         "address": "novueau address",
         "city": "ville",
-        "user_id": "votre user_id",
+        "user_id": "Générer automatiquement par le système, sert à idéntifer votre post",
         "postal_code": "nouveau postal code",
-        "updated_at": "nouvelle date",
-        "created_at": "nouvelle date",
-        "id": "auto incremente"
+        "updated_at": "Générer automatiquement par le système",
+        "created_at": "Générer automatiquement par le système",
+        "id": "Générer automatiquement par le système"
     }
 }
 ```
