@@ -258,7 +258,7 @@ Si tout se passe bien, voici un exemple de ce qui pourrait à quoi ressembler la
         "updated_at": "Générer automatiquement par le système",
         "created_at": "Générer automatiquement par le système",
         "user_id": "Générer automatiquement par le système, sert à idéntifer votre post"
-    
+   }
 }
 ```
 Relation entre Customers et Invoices
@@ -272,7 +272,7 @@ Donc logiquement, le "customerId" dans un "invoice" sera toujours l'id de votre 
 
 ###### Body pour un "invoice" :
 ```json
- {
+{
     "amount" : "Nouveu montant",
     "customerId : "clé étrangère qui se référe à un customer"
     "status"  : "Billed ou Cancel ou Paid",
@@ -297,6 +297,7 @@ Si tout se passe bien, voici un exemple de ce qui pourrait à quoi ressembler la
         "created_at": "Générer automatiquement par le système",
         "id": "Générer automatiquement par le système"
     }
+}
 ```
 ### Editer un "customer" ou un "invoice" :
 Méhode HTTP : PUT 
@@ -329,6 +330,7 @@ Si tout se passe bien, voici un exemple de ce qui pourrait à quoi ressembler la
         "created_at": "Générer automatiquement par le système",
         "id": "Générer automatiquement par le système"
     }
+}
 ```
 - endpoint :  `api/v1/invoices/edit/id`
 ```json
@@ -357,6 +359,7 @@ Si tout se passe bien, voici un exemple de ce qui pourrait à quoi ressembler la
         "created_at": "Générer automatiquement par le système",
         "id": "Générer automatiquement par le système"
     }
+}
 ```
 
 ### Supprimer un "customer" ou un "invoice":
