@@ -88,7 +88,7 @@ Pourquoi ?
 > Pour accéder aux endpoints protégés de l'API, vous devez d'abord faire une rêquette POST pour pouvoir obtenir un **Bearer Token** :
 
 1. **Créez une nouvelle requête** dans Postman ou Insomnia.
-2. **Choisissez la méthode HTTP** : POST.
+2. **Méthode HTTP** : POST
 3. **Entrez l'URL de l'API pour la connexion** :  ```api/login  ```
 
 ###### Body :
