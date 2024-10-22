@@ -300,6 +300,8 @@ Si tout se passe bien, voici un exemple de ce qui pourrait à quoi ressembler la
 ```
 ### Editer un "customer" ou un "invoice" :
 Méhode HTTP : PUT 
+
+
 endpoint :  `api/v1/customers/edit/id`
  ```json
  {
