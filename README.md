@@ -68,7 +68,7 @@ Pour tester cette API, vous pouvez utiliser des outils comme [Postman](https://w
 
 ### Utilisation avec Postman ou Insomnia
  
-### Étape 1 : Effectuer une requête GET pour l'inscription
+### Étape 1 : Effectuer une requête POST pour l'inscription
 
 1. **Créez une nouvelle requête** dans Postman ou Insomnia.
 2. **Méthode HTTP** : POST
