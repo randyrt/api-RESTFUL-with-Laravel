@@ -302,7 +302,7 @@ Si tout se passe bien, voici un exemple de ce qui pourrait à quoi ressembler la
 Méhode HTTP : PUT 
 
 
-endpoint :  `api/v1/customers/edit/id`
+- endpoint :  `api/v1/customers/edit/id`
  ```json
  {
     "name": "Nouveau nom",
