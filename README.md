@@ -321,7 +321,7 @@ Si tout se passe bien, voici un exemple de ce qui pourrait à quoi ressembler la
     "data": {
         "amount": 500,
         "customer_id": 139,
-        "user_id": "Générer automatiquement par le systèment, sert à identifier votre édition",
+        "user_id": "Générer automatiquement par le système, sert à identifier votre édition",
         "status": "Cancel",
         "billed_date": "2023-05-26 03:10:13",
         "paided_date": null,
