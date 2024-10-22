@@ -231,12 +231,13 @@ Methode HTTP : POST
 
 ###Création d'un nouveau post
 Il est important de ne pas inclure les champs id, created_at et updated_at, car ils seront gérés automatiquement par le système.
-#####body pour "un customer" :
+
+####body pour "un customer" :
  ```json
  {
     "name": "Nouveau nom",
     "type": ""company ou inviddiual",
-    "address": "Nouvel address",
+    "address": "Nouvel addresse",
     "city": "Ville",
     "postal_code": "Nouvel code postal",
     "user_id": "Votre id en tant qu'user, pourqu'on puisse identifier votre post"
@@ -253,7 +254,7 @@ Si tout se passe bien, voici un exemple de ce qui pourrait à quoi ressembler la
         "type": "company ou individual",
         "address": "novueau address",
         "city": "ville",
-        "user_id": "user id, foreign key pour un invoice",
+        "user_id": "votre user_id",
         "postal_code": "nouveau postal code",
         "updated_at": "nouvelle date",
         "created_at": "nouvelle date",
