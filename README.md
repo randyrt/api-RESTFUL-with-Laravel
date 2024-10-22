@@ -169,17 +169,17 @@ Cette API comporte deux endpoints majeurs pour la gestion de vos données :
 
 1. **Endpoint Clients**
    - Utilisé pour gérer les données liées aux clients, comme la création, la mise à jour et la récupération d'informations sur les clients.
-   - URL de base : `api/v1/api/customers`
+   - URL de base : `api/v1/customers`
 
 2. **Endpoint Factures**
    - Utilisé pour gérer les factures, y compris la génération, la mise à jour et la récupération des enregistrements de factures.
-   - URL de base : `api/v1/api/invoices`
+   - URL de base : `api/v1/invoices`
 
 Chaque endpoint offre des opérations spécifiques, et vous pouvez interagir avec eux en utilisant des méthodes HTTP telles que `GET`, `POST`, `PUT` et `DELETE`. Des instructions détaillées pour chaque endpoint sont fournies ci-dessous.
 
 ### Filtrer les rêquetes GET par ID : 
-- `api/v1/api/customers/id`
-- `api/v1/api/invoices/id`
+- `api/v1/customers/id`
+- `api/v1/invoices/id`
 
 ### Requêtes Avancées :
 
