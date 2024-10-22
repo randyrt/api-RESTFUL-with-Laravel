@@ -83,6 +83,25 @@ Pour tester cette API, vous pouvez utiliser des outils comme [Postman](https://w
 }
 ```
 
+### Réponse de la requête de l'inscription
+
+
+Si tout se passe bien,  vous recevrez une réponse au format JSON. Voici un exemple de ce à quoi pourrait ressembler la réponse :
+```json
+{
+    "status_code": "200",
+    "success": true,
+    "status_message": "user add with success",
+    "data": {
+        "name": "Votre nom",
+        "email": "Votre email",
+        "updated_at": "date de mis à jour",
+        "created_at": "date de création",
+        "id": "votre id"
+    }
+}
+```
+
 ### Étape 2 : Obtention du Token : 
 Pourquoi ? 
 > Pour accéder aux endpoints protégés de l'API, vous devez d'abord faire une rêquette POST pour pouvoir obtenir un **Bearer Token** :
