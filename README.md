@@ -233,5 +233,5 @@ Ce projet est sous licence [MIT](LICENSE). Vous êtes libre de l'utiliser, le mo
 
 ## Contact
 
-Pour toute question ou suggestion, vous pouvez me contacter à mon adresse [ email ](mailto:randytsiory@gmail.com) professionnel.
+Pour toute question ou suggestion, vous pouvez me contacter via [mon site web officiel ](https://randyporfolio.netlify.app/).
 
