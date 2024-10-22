@@ -245,20 +245,20 @@ Il est important de ne pas inclure les champs id, created_at et updated_at et us
 Si tout se passe bien, voici un exemple de ce qui pourrait à quoi ressembler la réponse : 
 ```json
 {
-    "status_code": 201,
+    "status_code": 200,
     "success": "true",
     "status_message": "customer add with success",
     "data": {
+        "id": "reste inchageable" 
         "name": "nouveau nom",
         "type": "company ou individual",
         "address": "novueau address",
         "city": "ville",
-        "user_id": "Générer automatiquement par le système, sert à idéntifer votre post",
         "postal_code": "nouveau postal code",
         "updated_at": "Générer automatiquement par le système",
         "created_at": "Générer automatiquement par le système",
-        "id": "Générer automatiquement par le système"
-    }
+        "user_id": "Générer automatiquement par le système, sert à idéntifer votre post"
+    
 }
 ```
 Relation entre Customers et Invoices
@@ -289,7 +289,7 @@ Si tout se passe bien, voici un exemple de ce qui pourrait à quoi ressembler la
     "data": {
         "amount": 500,
         "customer_id": 139,
-        "user_id": "Générer automatiquement par le système",
+        "user_id": "Générer automatiquement par le système, sert à idéntifer votre post"
         "status": "Cancel",
         "billed_date": "2023-05-26 03:10:13",
         "paided_date": null,
@@ -300,8 +300,62 @@ Si tout se passe bien, voici un exemple de ce qui pourrait à quoi ressembler la
 ```
 ### Editer un "customer" ou un "invoice" :
 Méhode HTTP : PUT 
-- `api/v1/customers/edit/id`
-- `api/v1/invoices/edit/id`
+endpoint :  `api/v1/customers/edit/id`
+ ```json
+ {
+    "name": "Nouveau nom",
+    "type": ""company ou inviddiual",
+    "address": "Nouvel addresse",
+    "city": "Ville",
+    "postal_code": "Nouvel code postal",
+}    
+```
+Si tout se passe bien, voici un exemple de ce qui pourrait à quoi ressembler la réponse : 
+```json
+{
+    "status_code": 200,
+    "success": "true",
+    "status_message": "invoice update with success",
+    "data": {
+        "amount": 500,
+        "customer_id": 139,
+        "user_id": "Générer automatiquement par le systèment, sert à identifier votre édition",
+        "status": "Cancel",
+        "billed_date": "2023-05-26 03:10:13",
+        "paided_date": null,
+        "updated_at": "Générer automatiquement par le système",
+        "created_at": "Générer automatiquement par le système",
+        "id": "Générer automatiquement par le système"
+    }
+```
+- endpoint :  `api/v1/invoices/edit/id`
+```json
+ {
+    "amount" : "Nouveu montant",
+    "customerId : "clé étrangère qui se référe à un customer"
+    "status"  : "Billed ou Cancel ou Paid",
+    "billedDate" : "date de facturation",
+    "paided_date" : "null, sauf si status: Paid"
+}  
+```
+Si tout se passe bien, voici un exemple de ce qui pourrait à quoi ressembler la réponse : 
+```json
+{
+    "status_code": 200,
+    "success": "true",
+    "status_message": "invoice update with success",
+    "data": {
+        "amount": 500,
+        "customer_id": 139,
+        "user_id": "Générer automatiquement par le systèment, sert à identifier votre édition",
+        "status": "Cancel",
+        "billed_date": "2023-05-26 03:10:13",
+        "paided_date": null,
+        "updated_at": "Générer automatiquement par le système",
+        "created_at": "Générer automatiquement par le système",
+        "id": "Générer automatiquement par le système"
+    }
+```
 
 ### Supprimer un "customer" ou un "invoice":
 Méhode HTTP : DELETE
