@@ -277,8 +277,26 @@ Donc logiquement, le "customerId" dans un "invoice" sera toujours l'id de votre 
     "customerId : "clé étrangère qui se référe à un customer"
     "status"  : "Billed ou Cancel ou Paid",
     "billedDate" : "date de facturation",
-    "paidedDate" : "null ou paid"
+    "paided_date" : "null, sauf si status: Paid"
 }  
+```
+Si tout se passe bien, voici un exemple de ce qui pourrait à quoi ressembler la réponse : 
+```json
+{
+    "status_code": 201,
+    "success": "true",
+    "status_message": "invoice add with success",
+    "data": {
+        "amount": 500,
+        "customer_id": 139,
+        "user_id": "Générer automatiquement par le système",
+        "status": "Cancel",
+        "billed_date": "2023-05-26 03:10:13",
+        "paided_date": null,
+        "updated_at": "Générer automatiquement par le système",
+        "created_at": "Générer automatiquement par le système",
+        "id": "Générer automatiquement par le système"
+    }
 ```
 ### Editer un "customer" ou un "invoice" :
 Méhode HTTP : PUT 
