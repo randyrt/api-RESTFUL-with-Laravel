@@ -225,7 +225,7 @@ L'API prend également en charge des requêtes avancées pour filtrer les donné
 - `api/v1/invoices?status[equal]=Billed&amount[greater_than]=350`
 
 ### Créer un "customer" ou un 'invoice"
-Methode : POST
+Methode HHTP : POST
 - `api/v1/customers/create`
 - `api/v1/invoices/create`
 
