@@ -26,7 +26,7 @@ class EditCustomerRequest extends FormRequest
         return [
             'name' => ['required', 'string'],
             'type' => ['required', 'string'],
-            'address' => ['required', 'string', 'unique.customers'],
+            'address' => ['required', 'string'],
             'city' => ['required', 'string'],
             'postal_code' => ['required', 'string']
         ];

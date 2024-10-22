@@ -57,7 +57,7 @@ class CustomerController extends Controller
             $customer->save();
 
             return response()->json([
-                'status_code' => 200,
+                'status_code' => 201,
                 'success' => 'true',
                 'status_message' => 'customer add with success',
                 'data' => $customer
@@ -88,8 +88,10 @@ class CustomerController extends Controller
     public function update(EditCustomerRequest $request, Customer $customer)
     {
         try {
+
             $customer->name = $request->name;
             $customer->type = $request->type;
+            $customer->user_id = Auth::user()->id;
             $customer->address = $request->address;
             $customer->city = $request->city;
             $customer->postal_code = $request->postal_code;

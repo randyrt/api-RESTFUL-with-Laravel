@@ -24,11 +24,11 @@ class CreateInvoiceRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'amount' => ['required', 'string'],
+            'amount' => ['required', 'integer'],
             'customer_id' => ['integer'],
             'status' => ['required','string'],
-            'billed_date' => ['required', 'string'],
-            'paided_date' => ['required', 'string'],
+            'billed_date' => ['date'],
+            'paided_date' => ['date'],
         ];
     }
 

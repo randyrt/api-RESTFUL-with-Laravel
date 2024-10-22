@@ -12,7 +12,7 @@ class Invoice extends Model
     use HasFactory;
 
     protected $fillable = [
-        'amouny',
+        'amount',
         'customer_id',
         'status',
         'billed_date',

@@ -13,13 +13,13 @@ class InvoicesQuery extends BaseQueryFilter
       'amount' => ['equal', 'greater_than', 'less_than', 'greater_than', 'less_than'],
       'status' => ['not_equal', 'equal'],
       'billedDate' => ['equal', 'greater_than', 'less_than'],
-      'paidDate' => ['equal', 'greater_than', 'less_than']
+      'paidedDate' => ['equal', 'greater_than', 'less_than']
   ];
 
   protected $columnMap = [
     'customerId' => 'customer_id',
     'billedDate' => 'billed_date',
-    'paidDate' => 'paid_date'
+    'paidedDate' => 'paided_date'
   ];
 
   protected $operatorMap = [

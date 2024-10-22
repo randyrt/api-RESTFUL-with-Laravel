@@ -53,7 +53,7 @@ class InvoiceController extends Controller
             $invoice->save();
 
             return response()->json([
-                'status_code' => 200,
+                'status_code' => 201,
                 'success' => 'true',
                 'status_message' => 'invoice add with success',
                 'data' => $invoice
@@ -83,14 +83,14 @@ class InvoiceController extends Controller
      */
     public function update(EditInvoiceRequest $request, Invoice $invoice)
     {
-        $find = Invoice::find($invoice);
 
-        $find->amount = $request->amount;
-        $find->customer_id = $request->customer_id;
-        $find->status = $request->status;
-        $find->billed_date = $request->billed_date;
-        $find->paided_date = $request->paided_date;
-        $find->save();
+        $invoice->amount = $request->amount;
+        $invoice->customer_id = $request->customer_id;
+        $invoice->status = $request->status;
+        $invoice->user_id = Auth::user()->id;
+        $invoice->billed_date = $request->billed_date;
+        $invoice->paided_date = $request->paided_date;
+        $invoice->save();
 
         return response()->json([
             'status_code' => 200,
