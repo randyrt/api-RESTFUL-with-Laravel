@@ -317,7 +317,7 @@ Si tout se passe bien, voici un exemple de ce qui pourrait à quoi ressembler la
 {
     "status_code": 200,
     "success": "true",
-    "status_message": "invoice update with success",
+    "status_message": "customer update with success",
     "data": {
         "amount": 500,
         "customer_id": 139,
