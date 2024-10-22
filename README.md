@@ -147,6 +147,8 @@ Si tout se passe bien, après avoir envoyé votre requête avec le Bearer Token,
 1. **Créez une nouvelle requête** dans Postman ou Insomnia.
 2. **Méthode HTTP** : GET
 3. **Entrez l'URL de l'API : ```api/protected ```
+
+   
 Si tout se passe bien, Voici un exemple de ce à quoi pourrait ressembler la réponse :
 ```json
 {
