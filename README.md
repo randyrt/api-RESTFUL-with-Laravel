@@ -72,7 +72,7 @@ Pour tester cette API, vous pouvez utiliser des outils comme [Postman](https://w
 
 1. **Créez une nouvelle requête** dans Postman ou Insomnia.
 2. **Méthode HTTP** : POST
-3. **Entrez l'URL de l'API pour la connexion**.  ```api/register  ```
+3. **Entrez l'URL de l'API pour la connexion** :  ```api/register  ```
 4. **Ajoutez les en-têtes nécessaires** pour l'authentification et les informations utilisateur. Dans l'en-tête, vous pouvez inclure les informations suivantes en format JSON :
 ```json
 
@@ -89,7 +89,7 @@ Pourquoi ?
 
 1. **Créez une nouvelle requête** dans Postman ou Insomnia.
 2. **Choisissez la méthode HTTP** : POST.
-3. **Entrez l'URL de l'API pour la connexion**.  ```api/login  ```
+3. **Entrez l'URL de l'API pour la connexion** :  ```api/login  ```
 
 ###### Body :
    ```json
@@ -116,7 +116,7 @@ Une fois que vous avez obtenu votre Bearer Token, vous devez effectuer une autre
 
 1. **Créez une nouvelle requête** dans Postman ou Insomnia.
 2. **Choisissez la méthode HTTP** : POST 
-3. **Entrez l'URL de l'API pour le même endpoint** que précédemment : ```api/login  ```
+3. **Entrez l'URL de l'API pour le même endpoint** que précédemment : ```api/login ```
 
 Remarque importante : L'opération est la même, mais cette fois-ci, vous devez inclure dans l'en tête du rêquete POST le Token d'autorisation. 
 Voici un exemple de ce à quoi pourrait ressembler cela : 
