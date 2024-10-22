@@ -229,10 +229,10 @@ Methode HTTP : POST
 - `api/v1/customers/create`
 - `api/v1/invoices/create`
 
-###Création d'un nouveau post
+### Création d'un nouveau post
 Il est important de ne pas inclure les champs id, created_at et updated_at, car ils seront gérés automatiquement par le système.
 
-####body pour "un customer" :
+#### body pour "un customer" :
  ```json
  {
     "name": "Nouveau nom",
