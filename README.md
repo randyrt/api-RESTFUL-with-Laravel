@@ -305,7 +305,7 @@ Méhode HTTP : PUT
 
 - endpoint :  `api/v1/customers/edit/id`
  ```json
- {
+{
     "name": "Nouveau nom",
     "type": ""company ou inviddiual",
     "address": "Nouvel addresse",
@@ -334,7 +334,7 @@ Si tout se passe bien, voici un exemple de ce qui pourrait à quoi ressembler la
 ```
 - endpoint :  `api/v1/invoices/edit/id`
 ```json
- {
+{
     "amount" : "Nouveu montant",
     "customerId : "clé étrangère qui se référe à un customer"
     "status"  : "Billed ou Cancel ou Paid",
