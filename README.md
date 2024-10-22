@@ -229,6 +229,56 @@ Methode HTTP : POST
 - `api/v1/customers/create`
 - `api/v1/invoices/create`
 
+###Création d'un nouveau post
+Il est important de ne pas inclure les champs id, created_at et updated_at, car ils seront gérés automatiquement par le système.
+#####body pour "un customer" :
+ ```json
+ {
+    "name": "Nouveau nom",
+    "type": ""company ou inviddiual",
+    "address": "Nouvel address",
+    "city": "Ville",
+    "postal_code": "Nouvel code postal",
+    "user_id": "Votre id en tant qu'user, pourqu'on puisse identifier votre post"
+}    
+```
+Si tout se passe bien, voici un exemple de ce qui pourrait à quoi ressembler la réponse : 
+```json
+{
+    "status_code": 201,
+    "success": "true",
+    "status_message": "customer add with success",
+    "data": {
+        "name": "nouveau nom",
+        "type": "company ou individual",
+        "address": "novueau address",
+        "city": "ville",
+        "user_id": "user id, foreign key pour un invoice",
+        "postal_code": "nouveau postal code",
+        "updated_at": "nouvelle date",
+        "created_at": "nouvelle date",
+        "id": "auto incremente"
+    }
+}
+```
+Relation entre Customers et Invoices
+Dans notre API, la colonne customerID dans la table invoices est une clé étrangère qui fait référence à un enregistrement unique dans la table customers. Cela signifie qu'une facture (représentée par customerID dans invoices) est associée à un seul client.
+
+Détails de la relation :
+Table Customers : Contient les informations des clients, identifiés par un ID unique.
+Table Invoices : Contient les informations des factures, chaque facture ayant un champ customerID correspond à l'ID d'un client.
+Cette relation permet d'assurer l'intégrité des données et de relier facilement les factures à leurs clients respectifs.
+Donc logiquement, le "customerId" dans un "invoice" sera toujours l'id de votre nouveau "customer". Ce qui fait qu'il est récommendé de créer un nouveu "customer" avant de créer un nouveau "invoice".
+####body pour "un invoice" :
+```json
+ {
+    "amount" : "Nouveu montant",
+    "customerId : "clé étrangère qui se référe à un customer"
+    "status"  : "Billed ou Cancel ou Paid",
+    "billedDate" : "date de facturation",
+    "paidedDate" : "null ou paid"
+}  
+```
 ### Editer un "customer" ou un "invoice" :
 Méhode HTTP : PUT 
 - `api/v1/customers/edit/id`
