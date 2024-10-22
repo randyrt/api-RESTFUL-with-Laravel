@@ -270,7 +270,7 @@ Table Invoices : Contient les informations des factures, chaque facture ayant un
 Cette relation permet d'assurer l'intégrité des données et de relier facilement les factures à leurs clients respectifs.
 Donc logiquement, le "customerId" dans un "invoice" sera toujours l'id de votre nouveau "customer". Ce qui fait qu'il est récommendé de créer un nouveu "customer" avant de créer un nouveau "invoice".
 
-###### body pour "un invoice" :
+###### un "invoice" :
 ```json
  {
     "amount" : "Nouveu montant",
