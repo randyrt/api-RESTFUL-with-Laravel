@@ -267,10 +267,10 @@ Dans notre API, la colonne customerID dans la table invoices est une clé étran
 
 Détails de la relation :
 
-Table Customers : Contient les informations des clients, identifiés par un ID unique.
+Table Customers :
+Contient les informations des clients, identifiés par un ID unique.
 
 Table Invoices :
-
 Contient les informations des factures, chaque facture ayant un champ customerID correspond à l'ID d'un client.
 Cette relation permet d'assurer l'intégrité des données et de relier facilement les factures à leurs clients respectifs.
 
