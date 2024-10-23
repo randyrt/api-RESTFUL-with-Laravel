@@ -249,7 +249,7 @@ Si tout se passe bien, voici un exemple de ce qui pourrait à quoi ressembler la
     "success": "true",
     "status_message": "customer add with success",
     "data": {
-        "id": "reste inchageable" 
+        "id": "auto incrementation",
         "name": "nouveau nom",
         "type": "company ou individual",
         "address": "novueau address",
@@ -301,7 +301,7 @@ Si tout se passe bien, voici un exemple de ce qui pourrait à quoi ressembler la
         "paided_date": null,
         "updated_at": "Générer automatiquement par le système",
         "created_at": "Générer automatiquement par le système",
-        "id": "Générer automatiquement par le système"
+         "id": "auto incrementation" 
     }
 }
 ```
