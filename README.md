@@ -236,7 +236,7 @@ Il est important de ne pas inclure les champs id, created_at et updated_at et us
  ```json
  {
     "name": "Nouveau nom",
-    "type": ""company ou inviddiual",
+    "type": ""company ou individual",
     "address": "Nouvel addresse",
     "city": "Ville",
     "postal_code": "Nouvel code postal",
@@ -313,7 +313,7 @@ Méhode HTTP : PUT
  ```json
 {
     "name": "Nouveau nom",
-    "type": ""company ou inviddiual",
+    "type": ""company ou individual",
     "address": "Nouvel addresse",
     "city": "Ville",
     "postal_code": "Nouvel code postal",
