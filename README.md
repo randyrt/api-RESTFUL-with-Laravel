@@ -262,12 +262,18 @@ Si tout se passe bien, voici un exemple de ce qui pourrait à quoi ressembler la
 }
 ```
 Relation entre Customers et Invoices
+
 Dans notre API, la colonne customerID dans la table invoices est une clé étrangère qui fait référence à un enregistrement unique dans la table customers. Cela signifie qu'une facture (représentée par customerID dans invoices) est associée à un seul client.
 
 Détails de la relation :
+
 Table Customers : Contient les informations des clients, identifiés par un ID unique.
-Table Invoices : Contient les informations des factures, chaque facture ayant un champ customerID correspond à l'ID d'un client.
+
+Table Invoices :
+
+Contient les informations des factures, chaque facture ayant un champ customerID correspond à l'ID d'un client.
 Cette relation permet d'assurer l'intégrité des données et de relier facilement les factures à leurs clients respectifs.
+
 Donc logiquement, le "customerId" dans un "invoice" sera toujours l'id de votre nouveau "customer". Ce qui fait qu'il est récommendé de créer un nouveu "customer" avant de créer un nouveau "invoice".
 
 ###### Body pour un "invoice" :
