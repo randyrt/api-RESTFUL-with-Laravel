@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use App\Models\Customer;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -24,6 +25,7 @@ class InvoiceFactory extends Factory
             'status' => $status,
             'billed_date' => $this->faker->dateTimeThisDecade(),
             'paided_date' =>  $status === 'Paid' ? $this->faker->dateTimeThisDecade() : null,
+            'user_id' => 1
         ];
     }
 }
