@@ -25,7 +25,7 @@ class InvoiceFactory extends Factory
             'status' => $status,
             'billed_date' => $this->faker->dateTimeThisDecade(),
             'paided_date' =>  $status === 'Paid' ? $this->faker->dateTimeThisDecade() : null,
-            'user_id' => 1
+            'user_id' => 0
         ];
     }
 }
